@@ -6,7 +6,6 @@ import org.scalatest.{FlatSpec, Matchers}
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration._
 import scala.concurrent.{Await, Future}
-import scala.util.Failure
 
 class FailOnExceptionUTest extends FlatSpec with Matchers {
 

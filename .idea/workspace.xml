@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8252332c-3380-4078-bc79-aec09af1fd12" name="Default" comment="" />
+    <list default="true" id="8252332c-3380-4078-bc79-aec09af1fd12" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/mapreduce/engine/Merge.scala" afterPath="$PROJECT_DIR$/src/main/scala/mapreduce/engine/Merge.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/mapreduce/engine/futures/MultiThreadedWithFutures.scala" afterPath="$PROJECT_DIR$/src/main/scala/mapreduce/engine/futures/MultiThreadedWithFutures.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/mapreduce/examples/WordCountApp.scala" afterPath="$PROJECT_DIR$/src/main/scala/mapreduce/examples/WordCountApp.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/mapreduce/engine/FailOnExceptionUTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/mapreduce/engine/FailOnExceptionUTest.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/mapreduce/engine/MergeUTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/mapreduce/engine/MergeUTest.scala" />
+    </list>
+    <list id="a897a307-9783-4a3c-9fec-9a860d907a11" name="Later.." comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -40,31 +50,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MovieRatingAverageUTest.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/scala/mapreduce/examples/MovieRatingAverageUTest.scala">
+      <file leaf-file-name="MultiThreadedWithFutures.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/engine/futures/MultiThreadedWithFutures.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="20" column="47" lean-forward="true" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
-              <folding />
+            <state relative-caret-position="148">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <element signature="e#34#97#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MergeUTest.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EngineByName.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/util/EngineByName.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="44" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+              <folding>
+                <element signature="e#24#68#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MergeUTest.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/scala/mapreduce/engine/MergeUTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Mapper.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/engine/Mapper.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+            <state relative-caret-position="593">
+              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
                 <element signature="e#26#55#0" expanded="true" />
               </folding>
@@ -72,71 +86,81 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default-scalamapreduce-build-optional.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-scalamapreduce-build-optional.xml">
+      <file leaf-file-name="Merge.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/engine/Merge.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="154">
+              <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+              <folding>
+                <element signature="e#26#55#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapReduceEngine.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/api/MapReduceEngine.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+              <folding>
+                <element signature="e#23#53#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapReduceExecuter.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/engine/actors/MapReduceExecuter.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="32" column="39" lean-forward="true" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+              <folding>
+                <element signature="e#33#75#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FailOnExceptionUTest.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/mapreduce/engine/FailOnExceptionUTest.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+              <folding>
+                <element signature="e#26#76#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WordCountApp.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/examples/WordCountApp.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="21" column="57" lean-forward="false" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+              <folding>
+                <element signature="e#28#58#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MovieRatingAverageApp.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/examples/MovieRatingAverageApp.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="82">
+              <caret line="30" column="18" lean-forward="true" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default-scalamapreduce-build-runtime.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-scalamapreduce-build-runtime.xml">
+      <file leaf-file-name="EngineTypes.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/engine/EngineTypes.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="default-scalamapreduce-build-test.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/target/scala-2.10/sbt-0.13/resolution-cache/reports/default-scalamapreduce-build-test.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.sbt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.sbt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project/build.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scala_compiler.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/scala_compiler.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+            <state relative-caret-position="105">
+              <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -170,7 +194,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/scala/mapreduce/SingleThreadedUTest.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/mapreduce/engine/MultiThreadedWithAkkaUTest.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/mapreduce/engine/examples/WordCountUTest.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/mapreduce/engine/MultiThreadedUTest.scala" />
@@ -188,7 +211,6 @@
         <option value="$PROJECT_DIR$/src/main/scala/mapreduce/engine/MultiThreadedWithFutures.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/mapreduce/examples/MovieExtractor.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/mapreduce/examples/RatingsExtractor.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/mapreduce/engine/MergeUTest.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/mapreduce/api/KeyValue.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/mapreduce/engine/ExecutionCore.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/mapreduce/engine/MultiThreadedWithAkka.scala" />
@@ -212,15 +234,17 @@
         <option value="$PROJECT_DIR$/src/main/scala/mapreduce/engine/futures/FailAllOnException.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/mapreduce/engine/futures/FutureMapAndCollect.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/mapreduce/engine/actors/MultiThreadedWithAkka.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/mapreduce/examples/WordCountApp.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/mapreduce/engine/futures/MultiThreadedWithFutures.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/mapreduce/examples/MovieRatingAverage.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/mapreduce/examples/MovieRatingAverageApp.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/mapreduce/engine/actors/MapReduceExecuter.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/mapreduce/engine/Merge.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/mapreduce/examples/MovieRatingAverageUTest.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/mapreduce/engine/FailOnExceptionUTest.scala" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/scala/mapreduce/engine/Merge.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/mapreduce/engine/futures/MultiThreadedWithFutures.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/mapreduce/examples/WordCountApp.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/mapreduce/engine/MergeUTest.scala" />
       </list>
     </option>
   </component>
@@ -251,6 +275,127 @@
             <path>
               <item name="ScalaMapReduce" type="b2602c69:ProjectViewProjectNode" />
               <item name="ScalaMapReduce" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ScalaMapReduce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ScalaMapReduce" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ScalaMapReduce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ScalaMapReduce" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ScalaMapReduce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ScalaMapReduce" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ScalaMapReduce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ScalaMapReduce" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="mapreduce" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ScalaMapReduce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ScalaMapReduce" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="mapreduce" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ScalaMapReduce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ScalaMapReduce" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="mapreduce" type="462c0819:PsiDirectoryNode" />
+              <item name="engine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ScalaMapReduce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ScalaMapReduce" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="mapreduce" type="462c0819:PsiDirectoryNode" />
+              <item name="engine" type="462c0819:PsiDirectoryNode" />
+              <item name="actors" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ScalaMapReduce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ScalaMapReduce" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="mapreduce" type="462c0819:PsiDirectoryNode" />
+              <item name="engine" type="462c0819:PsiDirectoryNode" />
+              <item name="futures" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ScalaMapReduce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ScalaMapReduce" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="mapreduce" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ScalaMapReduce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ScalaMapReduce" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="mapreduce" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ScalaMapReduce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ScalaMapReduce" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ScalaMapReduce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ScalaMapReduce" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ScalaMapReduce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ScalaMapReduce" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="mapreduce" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ScalaMapReduce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ScalaMapReduce" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="mapreduce" type="462c0819:PsiDirectoryNode" />
+              <item name="engine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ScalaMapReduce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ScalaMapReduce" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="scala" type="462c0819:PsiDirectoryNode" />
+              <item name="mapreduce" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ScalaMapReduce" type="b2602c69:ProjectViewProjectNode" />
@@ -317,43 +462,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="ScalaTest.FailOnExceptionUTest.combining a sequence of futures should convert them to a future of a sequence of the result type, which terminates immediately and results in the occurred exception">
-    <configuration name="FailOnExceptionUTest.combining a sequence of futures should convert them to a future of a sequence of the result type, which terminates and results in the occurred exception" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="scalamapreduce" />
-      <setting name="path" value="mapreduce.engine.FailOnExceptionUTest" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="combining a sequence of futures should convert them to a future of a sequence of the result type, which terminates and results in the occurred exception" />
-      <setting name="testKind" value="Test name" />
-      <setting name="showProgressMessages" value="true" />
-      <setting name="useSbt" value="false" />
-      <setting name="useUiWithSbt" value="false" />
-      <classRegexps />
-      <testRegexps />
-      <envs />
-    </configuration>
-    <configuration name="FailOnExceptionUTest.combining a sequence of futures should convert them to a future of a sequence of the result type, which terminates and returns the occurred exception" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="scalamapreduce" />
-      <setting name="path" value="mapreduce.engine.FailOnExceptionUTest" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="combining a sequence of futures should convert them to a future of a sequence of the result type, which terminates and returns the occurred exception" />
-      <setting name="testKind" value="Test name" />
-      <setting name="showProgressMessages" value="true" />
-      <setting name="useSbt" value="false" />
-      <setting name="useUiWithSbt" value="false" />
-      <classRegexps />
-      <testRegexps />
-      <envs />
-    </configuration>
+  <component name="RunManager" selected="ScalaTest.MergeUTest.merge should combine a sequence of mappings into a single map with all values for the same key aggregated&#10;merging a sequence of key value pairs should result in a Map with all values for the same key aggregated&#10;appending mappings to an existing map should merge the maps, adding new keys and values and adding to the seq of values for duplicate keys">
     <configuration name="FailOnExceptionUTest.combining a sequence of futures should convert them to a future of a sequence of the result type, which terminates immediately and results in the occurred exception" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="scalamapreduce" />
@@ -372,16 +481,16 @@
       <testRegexps />
       <envs />
     </configuration>
-    <configuration name="FailOnExceptionUTest.test should test" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+    <configuration name="MergeUTest.merge should combine a sequence of mappings into a single map with all values for the same key aggregated" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="scalamapreduce" />
-      <setting name="path" value="mapreduce.engine.FailOnExceptionUTest" />
+      <setting name="path" value="mapreduce.engine.MergeUTest" />
       <setting name="package" value="" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
       <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
       <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="test should test" />
+      <setting name="testName" value="merge should combine a sequence of mappings into a single map with all values for the same key aggregated" />
       <setting name="testKind" value="Test name" />
       <setting name="showProgressMessages" value="true" />
       <setting name="useSbt" value="false" />
@@ -390,22 +499,59 @@
       <testRegexps />
       <envs />
     </configuration>
-    <configuration name="MovieRatingAverageUTest.reducing a movie name and sequence of ratings should result in the movie name and the average of all ratings" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+    <configuration name="MergeUTest.merge should combine a sequence of mappings into a single map with all values for the same key aggregated&#10;merging a sequence of key value pairs should result in a Map with all values for the same key aggregated&#10;appending mappings to an existing map should merge the maps, adding new keys and values and adding to the seq of values for duplicate keys" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="scalamapreduce" />
-      <setting name="path" value="mapreduce.examples.MovieRatingAverageUTest" />
+      <setting name="path" value="mapreduce.engine.MergeUTest" />
       <setting name="package" value="" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
       <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
       <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="reducing a movie name and sequence of ratings should result in the movie name and the average of all ratings" />
+      <setting name="testName" value="merge should combine a sequence of mappings into a single map with all values for the same key aggregated&#10;merging a sequence of key value pairs should result in a Map with all values for the same key aggregated&#10;appending mappings to an existing map should merge the maps, adding new keys and values and adding to the seq of values for duplicate keys" />
       <setting name="testKind" value="Test name" />
       <setting name="showProgressMessages" value="true" />
       <setting name="useSbt" value="false" />
       <setting name="useUiWithSbt" value="false" />
       <classRegexps />
       <testRegexps />
+      <envs />
+    </configuration>
+    <configuration name="MergeUTest.merging a sequence of key value pairs should result in a Map with all values for the same key aggregated" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="scalamapreduce" />
+      <setting name="path" value="mapreduce.engine.MergeUTest" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="merging a sequence of key value pairs should result in a Map with all values for the same key aggregated" />
+      <setting name="testKind" value="Test name" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+    </configuration>
+    <configuration name="WordCountApp" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="mapreduce.examples.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="mapreduce.examples.WordCountApp" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="more-text.txt actor" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="scalamapreduce" />
       <envs />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -490,19 +636,19 @@
       <listeners />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="ScalaTest.FailOnExceptionUTest.test should test" />
-      <item index="1" class="java.lang.String" itemvalue="ScalaTest.FailOnExceptionUTest.combining a sequence of futures should convert them to a future of a sequence of the result type, which terminates and returns the occurred exception" />
-      <item index="2" class="java.lang.String" itemvalue="ScalaTest.FailOnExceptionUTest.combining a sequence of futures should convert them to a future of a sequence of the result type, which terminates and results in the occurred exception" />
-      <item index="3" class="java.lang.String" itemvalue="ScalaTest.MovieRatingAverageUTest.reducing a movie name and sequence of ratings should result in the movie name and the average of all ratings" />
-      <item index="4" class="java.lang.String" itemvalue="ScalaTest.FailOnExceptionUTest.combining a sequence of futures should convert them to a future of a sequence of the result type, which terminates immediately and results in the occurred exception" />
+      <item index="0" class="java.lang.String" itemvalue="Application.WordCountApp" />
+      <item index="1" class="java.lang.String" itemvalue="ScalaTest.FailOnExceptionUTest.combining a sequence of futures should convert them to a future of a sequence of the result type, which terminates immediately and results in the occurred exception" />
+      <item index="2" class="java.lang.String" itemvalue="ScalaTest.MergeUTest.merge should combine a sequence of mappings into a single map with all values for the same key aggregated" />
+      <item index="3" class="java.lang.String" itemvalue="ScalaTest.MergeUTest.merging a sequence of key value pairs should result in a Map with all values for the same key aggregated" />
+      <item index="4" class="java.lang.String" itemvalue="ScalaTest.MergeUTest.merge should combine a sequence of mappings into a single map with all values for the same key aggregated&#10;merging a sequence of key value pairs should result in a Map with all values for the same key aggregated&#10;appending mappings to an existing map should merge the maps, adding new keys and values and adding to the seq of values for duplicate keys" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="ScalaTest.FailOnExceptionUTest.combining a sequence of futures should convert them to a future of a sequence of the result type, which terminates immediately and results in the occurred exception" />
-        <item index="1" class="java.lang.String" itemvalue="ScalaTest.MovieRatingAverageUTest.reducing a movie name and sequence of ratings should result in the movie name and the average of all ratings" />
-        <item index="2" class="java.lang.String" itemvalue="ScalaTest.FailOnExceptionUTest.combining a sequence of futures should convert them to a future of a sequence of the result type, which terminates and results in the occurred exception" />
-        <item index="3" class="java.lang.String" itemvalue="ScalaTest.FailOnExceptionUTest.combining a sequence of futures should convert them to a future of a sequence of the result type, which terminates and returns the occurred exception" />
-        <item index="4" class="java.lang.String" itemvalue="ScalaTest.FailOnExceptionUTest.test should test" />
+        <item index="0" class="java.lang.String" itemvalue="ScalaTest.MergeUTest.merge should combine a sequence of mappings into a single map with all values for the same key aggregated&#10;merging a sequence of key value pairs should result in a Map with all values for the same key aggregated&#10;appending mappings to an existing map should merge the maps, adding new keys and values and adding to the seq of values for duplicate keys" />
+        <item index="1" class="java.lang.String" itemvalue="ScalaTest.MergeUTest.merging a sequence of key value pairs should result in a Map with all values for the same key aggregated" />
+        <item index="2" class="java.lang.String" itemvalue="ScalaTest.MergeUTest.merge should combine a sequence of mappings into a single map with all values for the same key aggregated" />
+        <item index="3" class="java.lang.String" itemvalue="Application.WordCountApp" />
+        <item index="4" class="java.lang.String" itemvalue="ScalaTest.FailOnExceptionUTest.combining a sequence of futures should convert them to a future of a sequence of the result type, which terminates immediately and results in the occurred exception" />
       </list>
     </recent_temporary>
   </component>
@@ -545,28 +691,37 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="8252332c-3380-4078-bc79-aec09af1fd12" name="Default" comment="" />
+      <changelist id="a897a307-9783-4a3c-9fec-9a860d907a11" name="Later.." comment="" />
       <created>1501696546603</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1501696546603</updated>
     </task>
+    <task id="LOCAL-00001" summary="adding empty readme.md">
+      <created>1502349018342</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1502349018342</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FailOnExceptionUTest_combining_a_sequence_of_futures_should_convert_them_to_a_future_of_a_sequence_of_the_result_type,_which_terminates_and_results_in_the_occurred_exception - 2017.08.10 at 01h 15m 20s.xml">
-      <configuration name="FailOnExceptionUTest.combining a sequence of futures should convert them to a future of a sequence of the result type, which terminates and results in the occurred exception" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="FailOnExceptionUTest_combining_a_sequence_of_futures_should_convert_them_to_a_future_of_a_sequence_of_the_result_type,_which_terminates_and_results_in_the_occurred_exception - 2017.08.10 at 01h 19m 38s.xml">
-      <configuration name="FailOnExceptionUTest.combining a sequence of futures should convert them to a future of a sequence of the result type, which terminates and results in the occurred exception" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="FailOnExceptionUTest_combining_a_sequence_of_futures_should_convert_them_to_a_future_of_a_sequence_of_the_result_type,_which_terminates_and_returns_the_occurred_exception - 2017.08.10 at 01h 15m 13s.xml">
-      <configuration name="FailOnExceptionUTest.combining a sequence of futures should convert them to a future of a sequence of the result type, which terminates and returns the occurred exception" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
     <history-entry file="FailOnExceptionUTest_combining_a_sequence_of_futures_should_convert_them_to_a_future_of_a_sequence_of_the_result_type,_which_terminates_immediately_and_results_in_the_occurred_exception - 2017.08.10 at 02h 38m 34s.xml">
       <configuration name="FailOnExceptionUTest.combining a sequence of futures should convert them to a future of a sequence of the result type, which terminates immediately and results in the occurred exception" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
     <history-entry file="FailOnExceptionUTest_combining_a_sequence_of_futures_should_convert_them_to_a_future_of_a_sequence_of_the_result_type,_which_terminates_immediately_and_results_in_the_occurred_exception - 2017.08.10 at 02h 39m 11s.xml">
       <configuration name="FailOnExceptionUTest.combining a sequence of futures should convert them to a future of a sequence of the result type, which terminates immediately and results in the occurred exception" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="MergeUTest_merge_should_combine_a_sequence_of_mappings_into_a_single_map_with_all_values_for_the_same_key_aggregated - 2017.08.10 at 03h 47m 02s.xml">
+      <configuration name="MergeUTest.merge should combine a sequence of mappings into a single map with all values for the same key aggregated" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="MergeUTest_merge_should_combine_a_sequence_of_mappings_into_a_single_map_with_all_values_for_the_same_key_aggregated - 2017.08.10 at 03h 47m 50s.xml">
+      <configuration name="MergeUTest.merge should combine a sequence of mappings into a single map with all values for the same key aggregated" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="MergeUTest_merging_a_sequence_of_key_value_pairs_should_result_in_a_Map_with_all_values_for_the_same_key_aggregated - 2017.08.10 at 04h 46m 45s.xml">
+      <configuration name="MergeUTest.merging a sequence of key value pairs should result in a Map with all values for the same key aggregated" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
     <history-entry file="MovieRatingAverageUTest_reducing_a_movie_name_and_sequence_of_ratings_should_result_in_the_movie_name_and_the_average_of_all_ratings - 2017.08.10 at 02h 36m 40s.xml">
       <configuration name="MovieRatingAverageUTest.reducing a movie name and sequence of ratings should result in the movie name and the average of all ratings" configurationId="ScalaTestRunConfiguration" />
@@ -595,7 +750,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1386" height="877" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -606,8 +760,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24720497" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24720497" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -627,15 +781,45 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adding empty readme.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding empty readme.md" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="scala-line">
           <url>file://$PROJECT_DIR$/src/main/scala/mapreduce/engine/futures/MultiThreadedWithFutures.scala</url>
-          <line>26</line>
+          <line>24</line>
           <properties />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
@@ -655,38 +839,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/testsc.sc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.2-sources.jar!/scala/concurrent/Future.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="652" column="0" lean-forward="false" selection-start-line="652" selection-start-column="0" selection-end-line="652" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.2-sources.jar!/scala/collection/generic/GenMapFactory.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="47" column="6" lean-forward="false" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/examples/RatingsExtractor.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/engine/ExecutionCore.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -735,16 +887,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/util/EngineByName.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/futures.sc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -753,63 +895,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/examples/WordCountApp.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="e#28#58#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.2-sources.jar!/scala/concurrent/package.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="431">
           <caret line="213" column="8" lean-forward="false" selection-start-line="213" selection-start-column="8" selection-end-line="213" selection-end-column="8" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/mapreduce/engine/MultiThreadedUTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/mapreduce/engine/MultiThreadedWithAkkaUTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/mapreduce/engine/SingleThreadedUTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="60" lean-forward="false" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/examples/MovieExtractor.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/examples/MovieRatingAverageApp.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="30" column="18" lean-forward="true" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
-          <folding>
-            <element signature="e#28#58#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -831,36 +921,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/engine/futures/FailAllOnException.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding>
-            <element signature="e#34#93#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/engine/futures/FutureMapAndCollect.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-          <folding>
-            <element signature="e#34#63#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/engine/futures/MultiThreadedWithFutures.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="33" column="3" lean-forward="true" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
-          <folding>
-            <element signature="e#34#97#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/engine/single/SingleThreaded.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -869,46 +929,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/engine/EngineTypes.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/engine/Merge.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-161">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#26#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.2-sources.jar!/scala/Function2.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="32" column="6" lean-forward="false" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/engine/Reducer.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-          <folding>
-            <element signature="e#26#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/api/EngineResult.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="11" lean-forward="false" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -932,26 +956,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/api/MapReduceEngine.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding>
-            <element signature="e#23#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/engine/actors/MapReduceExecuter.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="32" column="39" lean-forward="true" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
-          <folding>
-            <element signature="e#33#75#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/engine/actors/MapReduceWorker.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -970,24 +974,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/examples/MovieRatingAverage.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/mapreduce/engine/FailOnExceptionUTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="69" lean-forward="false" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="69" />
-          <folding>
-            <element signature="e#26#76#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1000,32 +986,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="1" lean-forward="false" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/mapreduce/examples/WordCountUTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
-          <folding>
-            <element signature="e#29#58#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/mapreduce/examples/MovieRatingAverageUTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="20" column="47" lean-forward="true" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/mapreduce/engine/MergeUTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1088,11 +1048,265 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/api/EngineResult.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="11" lean-forward="false" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/mapreduce/engine/MultiThreadedUTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/mapreduce/engine/MultiThreadedWithAkkaUTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/mapreduce/engine/SingleThreadedUTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="60" lean-forward="false" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/mapreduce/examples/MovieRatingAverageUTest.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+          <caret line="20" column="47" lean-forward="true" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/mapreduce/examples/WordCountUTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/engine/Reducer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding>
+            <element signature="e#26#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/examples/MovieRatingAverage.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/examples/MovieExtractor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="6" lean-forward="false" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/examples/RatingsExtractor.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1365">
+          <caret line="91" column="71" lean-forward="false" selection-start-line="91" selection-start-column="71" selection-end-line="91" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding>
+            <marker date="1502355185000" expanded="true" signature="80590:80607" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="80590:80625" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="80590:80638" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="80590:80653" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="80688:82860" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="80701:82845" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="80755:81050" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="80774:81035" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="80837:81015" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="80877:80981" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="80898:80959" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="81100:81427" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="81119:81412" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="81214:81392" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="81254:81358" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="81275:81336" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="81478:81797" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="81497:81782" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="81584:81762" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="81624:81728" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="81645:81706" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="81840:82146" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="81859:82131" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="81933:82111" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="81973:82077" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="81994:82055" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="82197:82514" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="82216:82499" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="82301:82479" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="82341:82445" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="82362:82423" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="82566:82831" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="82585:82816" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="82618:82796" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="82658:82762" ph="..." />
+            <marker date="1502355185000" expanded="true" signature="82679:82740" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.12.2-sources.jar!/scala/concurrent/Promise.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="110" column="7" lean-forward="false" selection-start-line="110" selection-start-column="7" selection-end-line="110" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/engine/futures/FailAllOnException.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/engine/futures/FutureMapAndCollect.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/engine/futures/MultiThreadedWithFutures.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#34#97#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/util/EngineByName.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="44" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+          <folding>
+            <element signature="e#24#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/examples/WordCountApp.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="21" column="57" lean-forward="false" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+          <folding>
+            <element signature="e#28#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/examples/MovieRatingAverageApp.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="30" column="18" lean-forward="true" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/engine/EngineTypes.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/more-text.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="-628666">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/api/MapReduceEngine.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding>
+            <element signature="e#23#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/engine/actors/MapReduceExecuter.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="39" lean-forward="true" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+          <folding>
+            <element signature="e#33#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/mapreduce/engine/FailOnExceptionUTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding>
+            <element signature="e#26#76#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/engine/Merge.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding>
+            <element signature="e#26#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/mapreduce/engine/MergeUTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="e#26#55#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

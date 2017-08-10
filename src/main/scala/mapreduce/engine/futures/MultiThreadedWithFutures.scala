@@ -12,8 +12,6 @@ class MultiThreadedWithFutures(numberOfWorkers: Int) extends MapReduceEngine {
   override def apply[I: ClassTag, K: ClassTag, V: ClassTag, R: ClassTag](program: MapReduce[I, K, V, R])(data: Seq[I]): Future[EngineResult[K, R]] = {
 
     implicit val context = ExecutionContext.global
-    val cores = Runtime.getRuntime.availableProcessors
-    println(s"Runtime available cores: $cores - number of workers requested: $numberOfWorkers")
 
     val mappingChunks: Seq[Seq[I]] = data.grouped(data.size / numberOfWorkers).toVector
 

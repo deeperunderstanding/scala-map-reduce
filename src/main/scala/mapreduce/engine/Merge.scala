@@ -13,7 +13,7 @@ object Merge {
     }
 
   /**
-    * alternative, yet here folding proves to be too inefficient
+    * alternative, yet here folding seems to be slightly less efficient
     * {{{
     *   collected.foldLeft(HashMap.empty[K, Queue[V]]) { case (aggregate, KeyValue(key, value)) =>
     *     aggregate + (key -> aggregate.getOrElse(key, Queue.empty).enqueue(value))
@@ -28,14 +28,6 @@ object Merge {
 
   implicit class MappingsAppend[K, V](accumulated: Mappings[K, V]) {
 
-    /**
-      * alternative, yet less efficient apparently
-      * {{{
-      *   (accumulated.toSeq ++ other.toSeq).groupBy(_._1) map { case (key, pairs) =>
-      *     key -> Queue[V](pairs flatMap (_._2.toVector): _*)
-      *   }
-      * }}}
-      */
     def append(other: Mappings[K, V]): Mappings[K, V] = {
 
       other.foldLeft(accumulated) { case (aggregate, keyVal) => val (key, values) = keyVal
