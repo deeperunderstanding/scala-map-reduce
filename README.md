@@ -1,6 +1,6 @@
 # Scala Map-Reduce
 
-## Original Assignment
+### Original Assignment
 
 > Write an engine to execute MapReduce programs. It can be written in either Python, Java or Scala. It doesn't necessarily have to be any similar to the examples provided, the important is the API and the output.
 
@@ -23,11 +23,11 @@ The Map-Reduce Engine itself is a program that is responsible for executing the 
   - ideally the mapping processes are executed in parallel on chunks of the data.
   - the mapping process can aggregate the result of the mapping function and sort them by key, associating every unique key with the list of values resulting from the mapping function which share the same key
 
-- __Shuffle__
+2. __Shuffle__
   - after mappings are complete the result of the individual processes need be sorted by key and all values for a key have to be collected.
   - this step needs to complete before the reducing phase can start since the reducing phase is executed once for every key and its set of values.
   - the shuffle phase is irrelevant to the user, but it's performance has significant impact on the performance of the entire system
-- __Reduce__
+3. __Reduce__
   - the pairs of keys and lists of values are distributed to the reduce process which invokes the reduce function, provided by the user, for every key and the associated list of values.
   - this can also be done completely in parallel, the results just need to be collected and returned to the user.
 
