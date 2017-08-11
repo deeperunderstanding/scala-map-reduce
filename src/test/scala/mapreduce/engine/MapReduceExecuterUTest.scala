@@ -13,6 +13,10 @@ import scala.concurrent.duration._
 class MapReduceExecuterUTest extends TestKit(ActorSystem("MapReduceExecuter")) with ImplicitSender
   with FlatSpecLike with Matchers with BeforeAndAfterAll {
 
+  override def afterAll(): Unit = {
+    TestKit.shutdownActorSystem(system)
+  }
+
   val executer: ActorRef = system.actorOf(Props(
     new MapReduceExecuter[String, Char, Int, Int](MockProgram)(1)))
 

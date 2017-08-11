@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8252332c-3380-4078-bc79-aec09af1fd12" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/scala/mapreduce/engine/MultiThreadedWithActorsATest.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/scala/mapreduce/engine/MultiThreadedWithFuturesATest.scala" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/scala/mapreduce/engine/SingleThreadedATest.scala" afterPath="$PROJECT_DIR$/src/test/scala/mapreduce/engine/EnginesATest.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/mapreduce/engine/MapReduceExecuterUTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/mapreduce/engine/MapReduceExecuterUTest.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/mapreduce/engine/MapReduceWorkerUTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/mapreduce/engine/MapReduceWorkerUTest.scala" />
     </list>
     <list id="a897a307-9783-4a3c-9fec-9a860d907a11" name="Later.." comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
@@ -100,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FailAllOnExceptionUTest.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FailAllOnExceptionUTest.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/mapreduce/engine/FailAllOnExceptionUTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="51" />
+            <state relative-caret-position="210">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -132,11 +131,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MapReduceExecuterUTest.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MapReduceExecuterUTest.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/scala/mapreduce/engine/MapReduceExecuterUTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="17" column="3" lean-forward="false" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
               <folding>
                 <element signature="e#26#74#0" expanded="true" />
               </folding>
@@ -159,8 +158,8 @@
       <file leaf-file-name="MapReduceWorkerUTest.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/mapreduce/engine/MapReduceWorkerUTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-62">
-              <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+            <state relative-caret-position="180">
+              <caret line="12" column="58" lean-forward="false" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
               <folding>
                 <element signature="e#26#74#0" expanded="true" />
               </folding>
@@ -240,13 +239,13 @@
         <option value="$PROJECT_DIR$/src/main/scala/mapreduce/engine/actors/MultiThreadedWithAkka.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/mapreduce/engine/actors/MapReduceExecuter.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/mapreduce/MockProgram.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/mapreduce/engine/MapReduceWorkerUTest.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/mapreduce/engine/MapReduceExecuterUTest.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/mapreduce/engine/MultiThreadedWithFuturesATest.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/mapreduce/performance.sc" />
         <option value="$PROJECT_DIR$/src/test/scala/mapreduce/Performance.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/mapreduce/engine/SingleThreadedATest.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/mapreduce/engine/EnginesATest.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/mapreduce/engine/MapReduceWorkerUTest.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/mapreduce/engine/MapReduceExecuterUTest.scala" />
       </list>
     </option>
   </component>
@@ -773,7 +772,14 @@
       <option name="project" value="LOCAL" />
       <updated>1502432861637</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="combined acceptance tests for the engine implementations">
+      <created>1502434475191</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1502434475191</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -830,13 +836,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24720497" sideWeight="0.06421357" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24596274" sideWeight="0.9357864" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24596274" sideWeight="0.9357864" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31925467" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21428572" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27701864" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27701864" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -884,7 +890,8 @@
     <MESSAGE value="adding empty readme.md" />
     <MESSAGE value="added U tests for merging and some minor changes" />
     <MESSAGE value="added a few more tests, did some small refactoring adn cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a few more tests, did some small refactoring adn cleanup" />
+    <MESSAGE value="combined acceptance tests for the engine implementations" />
+    <option name="LAST_COMMIT_MESSAGE" value="combined acceptance tests for the engine implementations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1236,32 +1243,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/mapreduce/engine/MapReduceExecuterUTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="e#26#74#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/mapreduce/engine/actors/MapReduceWorker.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="75" lean-forward="false" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
           <folding>
             <element signature="e#33#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/mapreduce/engine/MapReduceWorkerUTest.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-62">
-          <caret line="11" column="6" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding>
-            <element signature="e#26#74#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1340,9 +1327,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/mapreduce/engine/FailAllOnExceptionUTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="51" />
+        <state relative-caret-position="210">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/mapreduce/engine/MapReduceWorkerUTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="58" lean-forward="false" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
+          <folding>
+            <element signature="e#26#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/mapreduce/engine/MapReduceExecuterUTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="3" lean-forward="false" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+          <folding>
+            <element signature="e#26#74#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
