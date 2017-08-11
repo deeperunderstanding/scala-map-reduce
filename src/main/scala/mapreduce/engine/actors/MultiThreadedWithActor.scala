@@ -12,7 +12,7 @@ import scala.concurrent.duration._
 import scala.reflect.ClassTag
 
 
-class MultiThreadedWithAkka(numberOfWorkers: Int) extends MapReduceEngine {
+class MultiThreadedWithActor(numberOfWorkers: Int) extends MapReduceEngine {
   override def apply[I: ClassTag, K: ClassTag, V: ClassTag, R: ClassTag](program: MapReduce[I, K, V, R])(data: Seq[I]): Future[EngineResult[K, R]] = {
     val system = ActorSystem("MapReduceSystem")
 
@@ -26,9 +26,9 @@ class MultiThreadedWithAkka(numberOfWorkers: Int) extends MapReduceEngine {
   }
 }
 
-object MultiThreadedWithAkka {
+object MultiThreadedWithActor {
 
-  def apply(numberOfWorkers: Int = 4): MultiThreadedWithAkka = new MultiThreadedWithAkka(numberOfWorkers)
+  def apply(numberOfWorkers: Int = 4): MultiThreadedWithActor = new MultiThreadedWithActor(numberOfWorkers)
 }
 
 
