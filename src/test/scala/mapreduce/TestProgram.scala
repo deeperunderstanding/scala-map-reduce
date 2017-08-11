@@ -4,7 +4,7 @@ import mapreduce.api.{KeyValue, MapReduce}
 
 import scala.collection.immutable.Queue
 
-object MockProgram extends MapReduce[String, Char, Int, Int] {
+object TestProgram extends MapReduce[String, Char, Int, Int] {
 
   val testInput = Seq(
     "This",

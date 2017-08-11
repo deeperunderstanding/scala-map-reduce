@@ -18,7 +18,7 @@ object MovieRatingAverageApp extends App {
 
     case arguments =>
       println(s"ERROR: Wrong amount of arguments supplied: ${arguments.length}")
-      println("Application takes 2 or 3 parameters:")
+      println("Application takes 2 or 3 arguments:")
       println("[movies] [ratings] ([engine])")
       println("options for engine are: 'multi', 'actor'")
 
@@ -26,24 +26,7 @@ object MovieRatingAverageApp extends App {
 
   def run(movieFile: String, ratingsFile: String, engine: String = "single"): Unit = {
 
-    val movies = FileToLines(movieFile) match {
-      case Success(movieLines) => movieLines map {
-        MovieExtractor(_)
-      }
-      case Failure(ex) => throw ex
-    }
-
-    val ratings = FileToLines(ratingsFile) match {
-      case Success(ratingLines) => ratingLines map {
-        RatingsExtractor(_)
-      }
-      case Failure(ex) => throw ex
-    }
-
-    val moviesAndRatings = for {
-      movie <- movies
-      rating <- ratings if movie.id == rating.movieId
-    } yield MovieAndRating(movie, rating)
+    val moviesAndRatings = extractMoviesAndRatings(movieFile, ratingsFile)
 
     val startTime = System.currentTimeMillis()
     val result = MapReduce(MovieRatingAverage)(EngineByName(engine))(moviesAndRatings)
@@ -56,6 +39,33 @@ object MovieRatingAverageApp extends App {
     }
 
     Await.result(printResult, Duration.Inf)
+  }
+
+  private def extractMoviesAndRatings(movieFile: String, ratingsFile: String) = {
+    val movies = FileToLines(movieFile) match {
+      case Success(movieLines) => movieLines map {
+        MovieExtractor(_) match {
+          case Success(movie) => movie
+          case Failure(ex) => throw ex
+        }
+      }
+      case Failure(ex) => throw ex
+    }
+
+    val ratings = FileToLines(ratingsFile) match {
+      case Success(ratingLines) => ratingLines map {
+        RatingsExtractor(_) match {
+          case Success(rating) => rating
+          case Failure(ex) => throw ex
+        }
+      }
+      case Failure(ex) => throw ex
+    }
+
+    for {
+      movie <- movies
+      rating <- ratings if movie.id == rating.movieId
+    } yield MovieAndRating(movie, rating)
   }
 
 }

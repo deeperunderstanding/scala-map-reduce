@@ -17,7 +17,7 @@ object WordCountApp extends App {
 
     case arguments =>
       println(s"ERROR: Wrong amount of arguments supplied: ${arguments.length}")
-      println("Application takes 1 or 2 parameters:")
+      println("Application takes 1 or 2 arguments:")
       println("[filename] ([engine])")
       println("options for engine are: 'multi', 'actor'")
   }

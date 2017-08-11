@@ -63,7 +63,9 @@ which would ultimately result in
 
 ## Project Overview
 
+
 ### Structure
+`SBT` based project with following packages
 
   - __src/main/scala/mapreduce__ - root for application code
     - __api__ - interfaces and classes for describing map reduce programs and the interface to the engine
@@ -76,6 +78,21 @@ which would ultimately result in
   - __src/test/scala/mapreduce__
     - __engine__ - unit tests for engine components and the implementations
     - __examples__ - unit tests for example programs
+
+Dependencies are: from `build.sbt`
+```Scala
+scalaVersion := "2.12.3"
+
+resolvers += "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
+
+lazy val akkaVersion = "2.5.3"
+
+libraryDependencies ++= Seq(
+  "com.typesafe.akka" %% "akka-actor" % akkaVersion,
+  "com.typesafe.akka" %% "akka-testkit" % akkaVersion,
+  "org.scalatest" %% "scalatest" % "3.0.1" % "test"
+)
+```
 
 ### API
 
@@ -152,9 +169,9 @@ The lack of adaptability and general performance, for this type of problem, of t
 
 A simple implementation using a number of _Worker_ threads to execute mapping, collecting and reducing, has similarity to the future based version, except that the mapping and reducing can be done on a number of worker-threads that keep running and executes work based on what message they receive. Also this approach allows for better tuning in regards of chunk size and number of workers since those factors can be easily separated now. Some tweaking of the number of workers and the chunk size can lead to noticeable increase in performance over the single threaded and `Future` based version.
 
-In the implementation provided the shuffle phase is still implemented as a merge of results in a single thread (not the main thread), unlike the `Future` based approach though, which has to wait for all work to be finished before merging, the results can now be merged sequentially but asynchronous from the work process and more work can be done while merging is underway. This is done by the supervising Actor of the `MapReduceWorker`, the `MapReduceExecuter` which distributes the map- and reduce work to the workers and receives the results as messages for aggregation.
+In this version the shuffle phase is still implemented as a merge of results in a single thread (not the main thread), unlike the `Future` based approach though, which has to wait for all work to be finished before merging, the results can now be merged sequentially but asynchronous from the work process and more work can be done while merging is underway. This is done by the supervising Actor of the `MapReduceWorker`, the `MapReduceExecuter` which distributes the map- and reduce work to the workers and receives the results as messages for aggregation.
 
-> __Note__ :  Every `Actor` defines it's behavior by overriding a `receive` function, which returns a `PartialFunction` that describes what messages are reacted on and what happens for every type of message. The `Receive` type in `Actor` is defined as a `PartialFunction[Any, Unit]` which means that virtually 'everything' in Scala can be used as a message. Furthermore the `Actor` can change the currently used `PartialFunction` describing it's behaviour with the command `context.become`, which not only allows to treat an `Actor` as a flexible state-machine, but also to collect and aggregate data in an `Actor` without having to use a `var` or a mutable collection. See `MapReduceExecuter` as an example.
+> __Note__ :  Every `Actor` defines it's behavior by overriding a `receive` function, which returns a `PartialFunction` that describes what messages are reacted on and what happens for every type of message. The `Receive` type in `Actor` is defined as a `PartialFunction[Any, Unit]` which means that virtually 'everything' in Scala can be used as a message. Furthermore the `Actor` can change the currently used `PartialFunction` describing it's behaviour with the command `context.become`, which not only allows to treat an `Actor` as a flexible state-machine, but also to collect data in an `Actor` without having to use a `var` or a mutable collection. See `MapReduceExecuter` as an example.
 
 
 Once all work is done the result is send to the original requester. Since message can only be send to an `ActorRef`, to access the result from an Actor system the so called 'ask pattern' is used, which sends a message to the `MapReduceExecuter` which causes it to execute the mapping, merging and reducing on the given map-reduce program on the provided data, and to respond with a message containing the result, without the sender having to be an `Actor`. The 'ask pattern' cause the result to be of a type of `Future` which can simply be returned from the engine and responsibility for handling the result is given back to process executing the engine.
@@ -191,11 +208,25 @@ on average: 1240 ms
 
 ---
 
+### Using the example Apps
+The provided example Apps `WordCountApp` and `MovieRatingAverageApp` can be run from the `sbt` shell via
+```
+sbt > runMain mapreduce.examples.WordCountApp file.txt actor
+```
+The `WordCountApp` takes 1 or 2 parameters, the first being the file to read in which the wordc-ount is being performed on, the second argument is optional chooses the engine implementation being used for the App. The options for that are `single`, `multi` and `actor`, with `single` being the default argument if none is supplied. They respectively run the map-reduce on the `SingleThreaded` version, the `Future` based version or the `Actor` based version.
+
+To run the `MovieRatingAverageApp` respectively use following command in `sbt` shell, with the the first argument being the file containing all movies and the second argument being the file containing the ratings.
+```
+sbt > runMain mapreduce.examples.MovieRatingAverageApp movies.txt ratings.txt actor
+```
+
+
+
 ### TODO
-- Assembly of runnable JARs for the example apps
+
 - Error handling in the Actor based engine
-- More detailed performance analysis
 - Some missing tests
+- More detailed performance analysis
 
 ### Observations and Thoughts
 
@@ -203,7 +234,7 @@ on average: 1240 ms
 
 - Scala collections, the immutable as well as mutable ones have different performance characteristics. `Queue` has the best performance for appending values of all the immutable collections and is chosen to accumulate the sequence of values resulting from the mapping functions for a specific key. If a mutable collection for collecting values would have been chosen, ListBuffer would be most efficient. Decided to stick with immutable collections for safety in parallel processing, careful use of mutable collections might increase performance
 
-- After some experimentation with different ways of merging the data, comparing runtimes and considering their caveats, it appears the implementation of the shuffle-phase seems to have the most significant impact on performance along with optimization of the number of workers and the chunk size, the way the data is collected and merged from the mapping processes needs to be considered especially when implementing a map-reduce environment.
+- After some experimentation with different ways of merging the data and comparing runtimes, it appears the implementation of the shuffle-phase seems to have the most significant impact on performance along with optimization of the number of workers and the chunk size, the way the data is collected and merged from the mapping processes needs to be considered especially when implementing a map-reduce environment.
 
 - The Actor based version could be extended to implement a distributed shuffling of the key-set between the worker threads, which might impact the performance positively.
 

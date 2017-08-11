@@ -1,7 +1,8 @@
 package mapreduce.engine
 
-import mapreduce.MockProgram
-import mapreduce.api.{EngineResult, MapReduce}
+import akka.util.Timeout
+import mapreduce.TestProgram
+import mapreduce.api.{EngineResult, MapReduce, MapReduceEngine}
 import mapreduce.engine.actors.MultiThreadedWithActor
 import mapreduce.engine.futures.MultiThreadedWithFutures
 import mapreduce.engine.single.SingleThreaded
@@ -12,16 +13,21 @@ import scala.concurrent.duration._
 
 class EnginesATest extends FlatSpec with Matchers {
 
+  implicit val timeout = Timeout(5.minutes)
+
   "Executing a map-reduce program in the either version of the engine" should "produce the correct result for " +
     "that program from all engines" in {
 
-    val singleThrededResult = Await.result(MapReduce(MockProgram)(SingleThreaded)(MockProgram.testInput), 1.second)
-    val multiThreadedWithFuturesResult = Await.result(MapReduce(MockProgram)(MultiThreadedWithFutures(1))(MockProgram.testInput), 1.second)
-    val multiThreadedWithActorsResult = Await.result(MapReduce(MockProgram)(MultiThreadedWithActor(1))(MockProgram.testInput), 1.second)
+    val expectedResult = EngineResult(TestProgram.expectedReducingResult)
+    val mockMapReduce = MapReduce(TestProgram)(_ : MapReduceEngine)(TestProgram.testInput)
 
-    singleThrededResult shouldBe EngineResult(MockProgram.expectedReducingResult)
-    multiThreadedWithFuturesResult shouldBe EngineResult(MockProgram.expectedReducingResult)
-    multiThreadedWithActorsResult shouldBe EngineResult(MockProgram.expectedReducingResult)
+    val singleThreadedResult = Await.result(mockMapReduce(SingleThreaded), 1.second)
+    val multiThreadedWithFuturesResult = Await.result(mockMapReduce(MultiThreadedWithFutures(2)), 1.second)
+    val multiThreadedWithActorsResult = Await.result(mockMapReduce(MultiThreadedWithActor(2)), 1.second)
+
+    singleThreadedResult shouldBe expectedResult
+    multiThreadedWithFuturesResult shouldBe expectedResult
+    multiThreadedWithActorsResult shouldBe expectedResult
 
   }
 
