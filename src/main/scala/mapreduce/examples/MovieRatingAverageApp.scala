@@ -5,7 +5,7 @@ import mapreduce.util.{EngineByName, FileToLines}
 
 import scala.concurrent.Await
 import scala.concurrent.duration.Duration
-import scala.util.Success
+import scala.util.{Failure, Success}
 import scala.concurrent.ExecutionContext.Implicits.global
 
 
@@ -30,12 +30,14 @@ object MovieRatingAverageApp extends App {
       case Success(movieLines) => movieLines map {
         MovieExtractor(_)
       }
+      case Failure(ex) => throw ex
     }
 
     val ratings = FileToLines(ratingsFile) match {
       case Success(ratingLines) => ratingLines map {
         RatingsExtractor(_)
       }
+      case Failure(ex) => throw ex
     }
 
     val moviesAndRatings = for {

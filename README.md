@@ -2,13 +2,13 @@
 
 ### Original Assignment
 
-> Write an engine to execute MapReduce programs. It can be written in either Python, Java or Scala. It doesn't necessarily have to be any similar to the examples provided, the important is the API and the output.
+> - Write an engine to execute MapReduce programs. It can be written in either Python, Java or Scala. It doesn't necessarily have to be any similar to the examples provided, the important is the API and the output.
 
-> Write a version of the word-count MapReduce program exemplified above, runnable by your engine.
+> - Write a version of the word-count MapReduce program exemplified above, runnable by your engine.
 
-> Write a new MapReduce program that given two datasets (movies and ratings), returns the AVG rating of each movie (in the format: Movie Name, Rating).
+> - Write a new MapReduce program that given two datasets (movies and ratings), returns the AVG rating of each movie (in the format: Movie Name, Rating).
 
-> Write a second engine (with same API and requirements) that makes use of more than one core. You should be able to run the same program in either engine without changes.
+> - Write a second engine (with same API and requirements) that makes use of more than one core. You should be able to run the same program in either engine without changes.
 
 ## What is a Map-Reduce Engine?
 
@@ -93,13 +93,13 @@ trait MapReduce[In, Key, Value, Reduced] {
 ```
 The `KeyValue` class is just a more expressive Tuple of a Key and Value type
 
-```
+```Scala
 case class KeyValue[K, V](key: K, value: V)
 
 ```
 
 Example Word Count Program
-```
+```Scala
 object WordCount extends MapReduce[String, String, Int, Int] {
 
   override def mapper(line: String): Seq[KeyValue[String, Int]] =
@@ -154,7 +154,10 @@ A simple implementation using a number of _Worker_ threads to execute mapping, c
 
 In the implementation provided the shuffle phase is still implemented as a merge of results in a single thread (not the main thread), unlike the `Future` based approach though, which has to wait for all work to be finished before merging, the results can now be merged sequentially but asynchronous from the work process and more work can be done while merging is underway. This is done by the supervising Actor of the `MapReduceWorker`, the `MapReduceExecuter` which distributes the map- and reduce work to the workers and receives the results as messages for aggregation.
 
-Once all work is done the result is send to the original requester. Since message can only be send to an `ActorRef`, to access the result from an Actor system the so called 'ask pattern' is used, which sends a message to the `MapReduceExecuter` which causes it to execute the mapping, merging and reducing on the given map-reduce program on the provided data, and to respond with a message containing the result, without the sender having to be an `Actor`. The 'ask pattern' cause the result to be of a type of `Future` which can simply be returned from the engine and responsibility for handling the result given back to process executing the engine.
+> __Note__ :  Every `Actor` defines it's behavior by overriding a `receive` function, which returns a `PartialFunction` that describes what messages are reacted on and what happens for every type of message. The `Receive` type in `Actor` is defined as a `PartialFunction[Any, Unit]` which means that virtually 'everything' in Scala can be used as a message. Furthermore the `Actor` can change the currently used `PartialFunction` describing it's behaviour with the command `context.become`, which not only allows to treat an `Actor` as a flexible state-machine, but also to collect and aggregate data in an `Actor` without having to use a `var` or a mutable collection. See `MapReduceExecuter` as an example.
+
+
+Once all work is done the result is send to the original requester. Since message can only be send to an `ActorRef`, to access the result from an Actor system the so called 'ask pattern' is used, which sends a message to the `MapReduceExecuter` which causes it to execute the mapping, merging and reducing on the given map-reduce program on the provided data, and to respond with a message containing the result, without the sender having to be an `Actor`. The 'ask pattern' cause the result to be of a type of `Future` which can simply be returned from the engine and responsibility for handling the result is given back to process executing the engine.
 
 #### Comparison
 Runtime comparison of the engine implementations on the WordCount program over two datasets of different sizes (collected works of Shakespeare (~5MB) and collected works of Shakespeare * 5 (~25MB)) on the same environment
@@ -189,7 +192,8 @@ on average: 1240 ms
 ---
 
 ### TODO
-- __Assembly of runnable JARs for the example apps__
+- Assembly of runnable JARs for the example apps
+- Error handling in the Actor based engine
 - More detailed performance analysis
 - Some missing tests
 
@@ -203,6 +207,6 @@ on average: 1240 ms
 
 - The Actor based version could be extended to implement a distributed shuffling of the key-set between the worker threads, which might impact the performance positively.
 
-- Considering the overhead a splitting strategy needs to be chosen in respect the size of the data, a minimum chunk size should be determined to avoid starting many threads for small amounts of data
+- Considering the overhead a splitting strategy needs to be chosen in respect to the size of the data, a minimum chunk size should be determined to avoid starting many threads for small amounts of data
 
 - At some point in increasing data size a `Stream` based approach (lazy evaluating lists) could be considered, to avoid having to load all input data into memory before being able to execute the map-reduce. Regardless of that the mapping needs to complete over the entire input data before reducing can commence, the mapping results would need to be held in memory or moved to persistent storage again.
