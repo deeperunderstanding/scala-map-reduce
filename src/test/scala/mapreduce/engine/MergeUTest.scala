@@ -41,8 +41,7 @@ class MergeUTest extends FlatSpec with Matchers {
 
   "appending mappings to an existing map" should "merge the maps, adding new keys and values and adding to the seq of " +
     "values for duplicate keys" in {
-    Map("a" -> Queue(1, 1), "b" -> Queue(1)) append Map("b" -> Queue(1), "c" -> Queue(1)) shouldBe
-      Map("a" -> Queue(1, 1), "b" -> Queue(1, 1), "c" -> Queue(1))
+    mappingsA append mappingsB shouldBe Map("a" -> Queue(1, 1, 1), "b" -> Queue(1, 1, 1), "c" -> Queue(1), "d" -> Queue(1))
 
   }
 

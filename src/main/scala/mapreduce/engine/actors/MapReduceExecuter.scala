@@ -10,7 +10,7 @@ import mapreduce.engine.actors.Messages._
 import scala.reflect.ClassTag
 
 class MapReduceExecuter[In: ClassTag, Key: ClassTag, Value: ClassTag, Reduced: ClassTag]
-(program: MapReduce[In, Key, Value, Reduced])(numberOfWorkers: Int, MaxChunkSize: Int = 10000)
+(program: MapReduce[In, Key, Value, Reduced])(numberOfWorkers: Int = 4, MaxChunkSize: Int = 10000)
   extends Actor {
 
   private val mapReduceWorkRouter = context.actorOf(
@@ -26,7 +26,7 @@ class MapReduceExecuter[In: ClassTag, Key: ClassTag, Value: ClassTag, Reduced: C
 
     context become mappingStage(emptyMappings, split.length, requester)
     for (data <- split) {
-      mapReduceWorkRouter ! MappingWork(Chunk(data))
+      mapReduceWorkRouter ! MappingWork(data)
     }
   }
 

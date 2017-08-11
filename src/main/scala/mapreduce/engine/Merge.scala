@@ -29,7 +29,6 @@ object Merge {
   implicit class MappingsAppend[K, V](accumulated: Mappings[K, V]) {
 
     def append(other: Mappings[K, V]): Mappings[K, V] = {
-
       other.foldLeft(accumulated) { case (aggregate, keyVal) => val (key, values) = keyVal
         aggregate + (key -> aggregate.getOrElse(key, Queue.empty).enqueue(values))
       }

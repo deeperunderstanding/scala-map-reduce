@@ -12,7 +12,7 @@ class MapReduceWorker[I: ClassTag, K: ClassTag, V: ClassTag, R: ClassTag]
 (mapping: (I) => Seq[KeyValue[K, V]], reducing: (K, Seq[V]) => KeyValue[K, R]) extends Actor {
 
   override def receive: Receive = {
-    case MappingWork(chunk) => sender ! MappingResult(Mapper(mapping)(chunk.data.asInstanceOf[Seq[I]]))
+    case MappingWork(chunk) => sender ! MappingResult(Mapper(mapping)(chunk.asInstanceOf[Seq[I]]))
 
     case ReducingWork(chunk) => sender ! ReducingResult(Reducer(reducing)(chunk.asInstanceOf[Mappings[K, V]]))
 

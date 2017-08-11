@@ -6,9 +6,7 @@ object Messages {
 
   case class Execute[In](data: Seq[In])
 
-  case class Chunk[In](data: Seq[In]) //TODO get rid of this
-
-  case class MappingWork[In](chunk: Chunk[In])
+  case class MappingWork[In](chunk: Seq[In])
 
   case class ReducingWork[K, V](data: Mappings[K, V])
 

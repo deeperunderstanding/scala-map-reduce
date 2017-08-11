@@ -7,12 +7,12 @@ import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration._
 import scala.concurrent.{Await, Future}
 
-class FailOnExceptionUTest extends FlatSpec with Matchers {
+class FailAllOnExceptionUTest extends FlatSpec with Matchers {
 
   val exception = new Exception("too bad :(")
 
   "combining a sequence of futures" should "convert them to a future of a sequence of the result type, " +
-    "which terminates immediately and results in the occurred exception" in {
+    "which terminates immediately and results in an exception if any of the futures it was composed of throws an exception" in {
 
     val future1 = Future { Thread.sleep(5000); 1 }
     val future2 = Future { Thread.sleep(5000); 2 }
