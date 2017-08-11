@@ -29,7 +29,7 @@ The Map-Reduce Engine itself is a program that is responsible for executing the 
   - the shuffle phase is irrelevant to the user, but it's performance has significant impact on the performance of the entire system
 3. __Reduce__
   - the pairs of keys and lists of values are distributed to the reduce process which invokes the reduce function, provided by the user, for every key and the associated list of values.
-  - this can also be done completely in parallel, the results just need to be collected and returned to the user.
+  - this can also be done completely in parallel, the results just need to be collected, merged and returned to the user.
 
 On an example: Consider a map-reduce program, that counts the appearance of each letter in a sentence or a word. The word would be the input to the mapping function, which would go through the sentence letter by letter and return a key-value pair with the letter as the key and the number 1 as the value.
 
@@ -161,7 +161,7 @@ it appeared that the shuffle phase is a bottleneck in this version as the result
 
 For the reducing phase the aggregated keys and values from the mapping phase are split into an equal amount of chunks over the key-set and are each handed over to a `Future` for execution in parallel. Getting new threads from the thread-pool again and assigning the work for the reducing phase, bears some overhead though.
 
-A definite plus is that we can continue working and transforming the potential result without ever having to block. The application receiving the result from the engine can decide how to handle the result and if and when to block and react. After some consideration though it appears this approach is suboptimal
+A definitive plus is that we can continue working and transforming the potential result without ever having to block. The application receiving the result from the engine can decide how to handle the result and if and when to block and react. After some consideration though it appears this approach is suboptimal
 
 #### Multi Threaded Version with Actors
 
@@ -174,7 +174,7 @@ In this version the shuffle phase is still implemented as a merge of results in 
 > __Note__ :  Every `Actor` defines it's behavior by overriding a `receive` function, which returns a `PartialFunction` that describes what messages are reacted on and what happens for every type of message. The `Receive` type in `Actor` is defined as a `PartialFunction[Any, Unit]` which means that virtually 'everything' in Scala can be used as a message. Furthermore the `Actor` can change the currently used `PartialFunction` describing it's behaviour with the command `context.become`, which not only allows to treat an `Actor` as a flexible state-machine, but also to collect data in an `Actor` without having to use a `var` or a mutable collection. See `MapReduceExecuter` as an example.
 
 
-Once all work is done the result is send to the original requester. Since message can only be send to an `ActorRef`, to access the result from an Actor system the so called 'ask pattern' is used, which sends a message to the `MapReduceExecuter` which causes it to execute the mapping, merging and reducing on the given map-reduce program on the provided data, and to respond with a message containing the result, without the sender having to be an `Actor`. The 'ask pattern' cause the result to be of a type of `Future` which can simply be returned from the engine and responsibility for handling the result is given back to process executing the engine.
+Once all work is done the result is send to the original requester. Since message can only be send to an `ActorRef`, to access the result from an Actor system the so called 'ask pattern' is used, which sends a message to the `MapReduceExecuter` which causes it to execute the mapping, merging and reducing on the given map-reduce program on the provided data, and to respond with a message containing the result, without the sender having to be an `Actor`. That causes the result to be of a type of `Future` which can simply be returned from the engine and responsibility for handling the result is given back to process executing the engine.
 
 #### Comparison
 Runtime comparison of the engine implementations on the WordCount program over two datasets of different sizes (collected works of Shakespeare (~5MB) and collected works of Shakespeare * 5 (~25MB)) on the same environment
@@ -213,7 +213,7 @@ The provided example Apps `WordCountApp` and `MovieRatingAverageApp` can be run 
 ```
 sbt > runMain mapreduce.examples.WordCountApp file.txt actor
 ```
-The `WordCountApp` takes 1 or 2 parameters, the first being the file to read in which the wordc-ount is being performed on, the second argument is optional chooses the engine implementation being used for the App. The options for that are `single`, `multi` and `actor`, with `single` being the default argument if none is supplied. They respectively run the map-reduce on the `SingleThreaded` version, the `Future` based version or the `Actor` based version.
+The `WordCountApp` takes 1 or 2 parameters, the first being the file to read in which the word-count is being performed on, the second argument is optional and chooses the engine implementation used for the App. The options for that are `single`, `multi` and `actor`, with `single` being the default argument if none is supplied. They respectively run the map-reduce on the `SingleThreaded` version, the `Future` based version or the `Actor` based version.
 
 To run the `MovieRatingAverageApp` respectively use following command in `sbt` shell, with the the first argument being the file containing all movies and the second argument being the file containing the ratings.
 ```
